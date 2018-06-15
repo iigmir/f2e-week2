@@ -23,7 +23,8 @@ header
     background: #7828B4;
     color: #FFFFFF;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    // grid-template-rows: 40px 4em 40px;
     grid-gap: 1rem;
     grid-auto-rows: minmax(10rem, auto);
 

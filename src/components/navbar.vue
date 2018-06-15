@@ -1,6 +1,6 @@
 <template>
     <nav>
-        Hello
+        Navbar
     </nav>
 </template>
 
