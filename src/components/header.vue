@@ -1,0 +1,44 @@
+<template>
+    <header>
+        <div class="title">
+            <h1>{{ msg }}</h1>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Explore your own activities" />
+        </div>
+    </header>
+</template>
+
+<script>
+export default {
+    name: "Header",
+    props: { msg: String }
+}
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="scss">
+header
+{
+    background: #7828B4;
+    color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(10rem, auto);
+
+    .title, .search { margin: auto; }
+
+    .search input
+    {
+        border: 0;
+        width: 30rem;
+        height: 5rem;
+        font-size: 1.2rem;
+        color: rgba(255,255,255,0.50);
+        background-color: rgba( 0, 0, 0, 0 );
+        border-bottom: 1px solid #FFFFFF;
+        padding-left: 2rem;
+    }
+}
+</style>
