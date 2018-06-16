@@ -4,6 +4,7 @@
             <h1>{{ msg }}</h1>
         </div>
         <div class="search">
+            <i class="fas fa-search fa-2x"></i>
             <input type="text" placeholder="Explore your own activities" />
         </div>
     </header>
@@ -30,16 +31,24 @@ header
 
     .title, .search { margin: auto; }
 
-    .search input
+    .search
     {
-        border: 0;
-        width: 30rem;
-        height: 5rem;
-        font-size: 1.2rem;
-        color: rgba(255,255,255,0.50);
-        background-color: rgba( 0, 0, 0, 0 );
-        border-bottom: 1px solid #FFFFFF;
-        padding-left: 2rem;
+        input
+        {
+            border: 0;
+            width: 30rem;
+            height: 5rem;
+            font-size: 1.2rem;
+            color: rgba(255,255,255,0.50);
+            background-color: rgba( 0, 0, 0, 0 );
+            border-bottom: 1px solid #FFFFFF;
+            padding-left: 2rem;
+        }
+        
+        i
+        {
+            transform: translate(1.5rem,5px);
+        }
     }
 }
 </style>
