@@ -91,6 +91,10 @@ nav
                     padding: 4px;
                 }
             }
+            &.checkbox
+            {
+                input{ border: 0; }
+            }
         }
     }
 }

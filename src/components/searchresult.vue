@@ -22,7 +22,7 @@
                 <section>
                     <h3> Kogi Cosby sweater. </h3>
                     <p> Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condimentum pretium. Aliquam erat volutpat. Integer ut tincidunt orci. Etiam tristique, elit ut consectetur iaculis, metus lectus mattis justo, vel mollis eros neque quis augue. Sed lobortis ultrices lacus, a placerat metus rutrum sit amet. Aenean ut suscipit justo. </p>
-                    <div style="margin:8px">
+                    <div style="margin-bottom:15px">
                         <span class="author">Author</span> 
                         <span class="tag">Entertainment</span>
                     </div>
@@ -88,8 +88,9 @@ export default {
         }
         section
         {
-            padding-left: 2rem;
+            padding: 0 2rem 0 2rem;
             background-color: #FFFFFF;
+            h3 { color: #9013FE; }
         }
         div span { margin-right: 1rem; }
         .tag
