@@ -16,7 +16,11 @@ import searchresult from "@/components/searchresult.vue";
 
 export default {
     name: "home",
-    mounted(){},
+    mounted()
+    {
+        // console.log( this.$store );
+        this.$store.dispatch("init_info");
+    },
     components: {
         Headerbar,
         navbar,
@@ -28,11 +32,9 @@ export default {
 <style lang="scss" scoped>
 #maingrid
 {
-    margin-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
     grid-gap: 1rem;
     grid-auto-rows: minmax(10rem, auto);
-
 }
 </style>

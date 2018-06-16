@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <div>
+        <div class="bar">
             <p> Location </p>
             <select name="location" id="nav-location">
                 <option value="1">fdns</option>
@@ -8,7 +8,7 @@
                 <option value="3">fdns</option>
             </select>
         </div>
-        <div>
+        <div class="bar">
             <p> Categories </p>
             <label>
                 <input type="checkbox" name="all" id=""> All
@@ -27,8 +27,38 @@
 </template>
 
 <script>
+// import { mapState } from "vuex";
+
 export default {
     name: "navbar",
     components: {}
 }
 </script>
+
+<style lang="scss" scoped>
+nav
+{
+    width: 80%;
+    margin-left: 5rem;
+    text-align: left;
+    background: #EBEBEB;
+    .bar
+    {
+        padding: 2rem;
+        p
+        {
+            font-family: "Roboto";
+            font-size: 20px;
+            color: #000000;
+        }
+        select
+        {
+            width: 100%;
+            border: 0;
+            padding: 1rem;
+            font-size: 16px;
+        }
+    }
+}
+</style>
+

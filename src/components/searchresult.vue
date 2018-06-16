@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div id="result">
         Hello
     </div>
 </template>
@@ -10,3 +10,10 @@ export default {
     components: {}
 }
 </script>
+
+<style lang="scss" scoped>
+#result
+{
+    margin-top:2rem;
+}
+</style>
