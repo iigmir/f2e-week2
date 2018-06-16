@@ -1,7 +1,8 @@
 <template>
     <nav>
+        <h2 hidden> Navbar </h2>
         <div class="bar">
-            <p> Location </p>
+            <h3> Location </h3>
             <select name="location" id="nav-location">
                 <option value="0">All</option>
                 <option value="1">B ares</option>
@@ -9,7 +10,7 @@
             </select>
         </div>
         <div class="bar">
-            <p> Date </p>
+            <h3> Date </h3>
             <label class="txt">
                 <span>From</span>
                 <input type="date" name="foo">
@@ -20,7 +21,7 @@
             </label>
         </div>
         <div class="bar">
-            <p> Categories </p>
+            <h3> Categories </h3>
             <label class="checkbox">
                 <input type="checkbox" name="all">
                 <span>All</span>
@@ -54,14 +55,14 @@ export default {
 nav
 {
     width: 300px;
-    margin-left: 8rem;
+    margin-left: 4rem;
     text-align: left;
     background: #EBEBEB;
     .bar
     {
         padding: 2rem;
         border-bottom: 1px solid #D7D7D7;
-        p
+        h3
         {
             font-family: "Roboto";
             font-size: 20px;

@@ -33,7 +33,7 @@ export default {
 #maingrid
 {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 10px;
     grid-gap: 1rem;
     grid-auto-rows: minmax(10rem, auto);
 }
