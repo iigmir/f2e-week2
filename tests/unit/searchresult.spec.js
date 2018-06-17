@@ -57,7 +57,6 @@ describe( "searchresult.vue" , () =>
             const wrapper = mount( searchresult, {
                 mocks: { $store }
             });
-            console.log( wrapper.vm.group_arrays );
             expect( wrapper.vm.group_arrays( 3 ) ).to.deep.equal( case1 );
             expect( wrapper.vm.group_arrays( 5 ) ).to.deep.equal( case2 );
             expect( wrapper.vm.group_arrays( 6 ) ).to.deep.equal( case3 );

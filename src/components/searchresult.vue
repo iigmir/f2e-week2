@@ -81,6 +81,15 @@
                 </section>
             </article>
         </div>
+        <div class="pagination">
+            <div>
+                <span> &lt;&lt; </span>
+                <span> 1 </span>
+                <span> 2 </span>
+                <span> 3 </span>
+                <span> &gt;&gt; </span>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -114,6 +123,7 @@ export default {
 #result
 {
     text-align: left;
+
     .panel
     {
         padding: 1rem;
@@ -171,6 +181,25 @@ export default {
             color: #FFFFFF;
             border-radius: 100px;
             padding: 8px;
+        }
+    }
+
+    .pagination
+    {
+        div
+        {
+            float: right;
+            padding: 2rem;
+            span
+            {
+                padding: 1rem;
+                color: #9013FE;
+                background: #FFFFFF;
+                border: 1px solid #ECEEEF;
+                &:first-child { border-radius: 4px 0 0 4px; }
+                &:last-child  { border-radius: 4px 4px 0 0; }
+                &.chosen{ background: #9013FE;color: #FFFFFF; }
+            }
         }
     }
 }
