@@ -18,7 +18,6 @@ export default {
     name: "home",
     mounted()
     {
-        // console.log( this.$store );
         this.$store.dispatch("init_info");
     },
     components: {
@@ -33,8 +32,7 @@ export default {
 #maingrid
 {
     display: grid;
-    grid-template-columns: 1fr 2fr 10px;
-    grid-gap: 1rem;
+    grid-template-columns: 400px 1fr 10px;
     grid-auto-rows: minmax(10rem, auto);
 }
 </style>

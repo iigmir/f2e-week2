@@ -36,6 +36,50 @@
                     </div>
                 </section>
             </article>
+            <article>
+                <div class="image">
+                    <img src="http://www.mobygames.com/images/covers/l/319702-minecraft-playstation-4-edition-minecraft-plastic-texture-pack-playstation-4-front-cover.jpg"
+                    alt="Kogi Cosby sweater.">
+                </div>
+                <section>
+                    <h3> Kogi Cosby sweater. </h3>
+                    <p> Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condimentum pretium. Aliquam erat volutpat. Integer ut tincidunt orci. Etiam tristique, elit ut consectetur iaculis, metus lectus mattis justo, vel mollis eros neque quis augue. Sed lobortis ultrices lacus, a placerat metus rutrum sit amet. Aenean ut suscipit justo. </p>
+                    <div style="margin-bottom:15px">
+                        <span class="author">Author</span> 
+                        <span class="tag">Entertainment</span>
+                    </div>
+                    <div>
+                        <span class="location">
+                            <i class="fas fa-map-marker"></i> Kaohsiung City
+                        </span>
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i> 2018/5/24 - 2018/5/31
+                        </span>
+                    </div>
+                </section>
+            </article>
+            <article>
+                <div class="image">
+                    <img src="http://www.mobygames.com/images/covers/l/319702-minecraft-playstation-4-edition-minecraft-plastic-texture-pack-playstation-4-front-cover.jpg"
+                    alt="Kogi Cosby sweater.">
+                </div>
+                <section>
+                    <h3> Kogi Cosby sweater. </h3>
+                    <p> Donec euismod scelerisque ligula. Maecenas eu varius risus, eu aliquet arcu. Curabitur fermentum suscipit est, tincidunt mattis lorem luctus id. Donec eget massa a diam condimentum pretium. Aliquam erat volutpat. Integer ut tincidunt orci. Etiam tristique, elit ut consectetur iaculis, metus lectus mattis justo, vel mollis eros neque quis augue. Sed lobortis ultrices lacus, a placerat metus rutrum sit amet. Aenean ut suscipit justo. </p>
+                    <div style="margin-bottom:15px">
+                        <span class="author">Author</span> 
+                        <span class="tag">Entertainment</span>
+                    </div>
+                    <div>
+                        <span class="location">
+                            <i class="fas fa-map-marker"></i> Kaohsiung City
+                        </span>
+                        <span class="date">
+                            <i class="far fa-calendar-alt"></i> 2018/5/24 - 2018/5/31
+                        </span>
+                    </div>
+                </section>
+            </article>
         </div>
     </div>
 </template>
@@ -79,8 +123,10 @@ export default {
     article
     {
         display: grid;
-        grid-template-columns: 240px 1fr;
-        grid-template-rows: 240px;
+        grid-template-columns: 220px 2fr 1rem;
+        grid-template-rows: 220px;
+        grid-auto-rows: 1fr;
+        margin-bottom: 1rem;
         .image img
         {
             width: 100%;
@@ -88,9 +134,16 @@ export default {
         }
         section
         {
-            padding: 0 2rem 0 2rem;
+            padding: 1rem;
             background-color: #FFFFFF;
             h3 { color: #9013FE; }
+            p
+            {
+                height: 40px;
+                margin: 0 0 1rem 0;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
         }
         div span { margin-right: 1rem; }
         .tag

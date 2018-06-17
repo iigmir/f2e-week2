@@ -57,11 +57,12 @@ nav
     width: 300px;
     margin-left: 4rem;
     text-align: left;
-    background: #EBEBEB;
     .bar
     {
         padding: 2rem;
+        background: #EBEBEB;
         border-bottom: 1px solid #D7D7D7;
+        &:last-child{ border-bottom: 0; }
         h3
         {
             font-family: "Roboto";
