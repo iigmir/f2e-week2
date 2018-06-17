@@ -6,12 +6,15 @@ Vue.use( Vuex );
 
 export default new Vuex.Store({
     state: {
-        data_container:[]
+        data_container:[],
+        keywords_list: []
     },
     mutations: {
         store_info( state, payload )
         {
-            state.data_container = payload.response.data.result.records;
+            let datas = payload.response.data.result.records;
+            state.data_container = datas;
+            state.keywords_list  = Object.keys( datas[0] ); // First elem as example
         }
     },
     actions: {
