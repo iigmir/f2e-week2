@@ -1,4 +1,4 @@
 module.exports = {
     outputDir: "docs",
-    assetsDir: "./f2e-week2/"
+    baseUrl: './f2e-week2',
 }
