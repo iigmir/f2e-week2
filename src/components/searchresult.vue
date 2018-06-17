@@ -98,13 +98,13 @@ export default {
     mounted()
     {
         this.src_array = this.$store.state.data_container;
-        console.log( this.src_array );
+        // console.log( this.src_array );
         // this.group_arrays
     },
     methods: {
-        group_arrays( group_number )
+        group_arrays( group_items )
         {
-            //
+            return group_items;
         }
     }
 }
