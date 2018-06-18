@@ -101,19 +101,81 @@ export default {
         return {
             src_array: [],
             grouped_array: [],
-            filter_array: []
+            filter_array: [],
+            items_per_page: 3,
+            pages_number: 0,
+            current_positison: 0,
+            current_pos_array: []
         };
     },
     mounted()
     {
-        this.src_array = this.$store.state.data_container;
-        // console.log( this.src_array );
-        // this.group_arrays
+        this.$store.dispatch("init_info");
+        // this.src_array = this.$store.state.data_container;
+        this.$set( this, "src_array" , this.get_vuex_source );
+        // if( this.$store.state.data_container.length === 0 )
+        // {
+        //     console.log( this.$store.state.data_container );
+        //     debugger;
+        //     throw new Error("There's problem with vuex!");
+        // }
+        this.$nextTick( () =>
+        {
+            // this.$set( this, "src_array" , this.get_vuex_source() );
+            // this.$set( this, "pages_number" , this.group_numbers( this.items_per_page ) );
+            this.pages_number = this.group_numbers( this.items_per_page );
+            this.current_pos_array = this.group_pagination({
+                ary:this.src_array,
+                items:this.items_per_page,
+                page_pos:this.current_positison,
+            });
+        });
     },
     methods: {
-        group_arrays( group_items )
+        group_numbers( input )
         {
-            return group_items;
+            let value = Math.ceil( this.src_array.length / input );
+            return value;
+        },
+        group_pagination( input )
+        {
+            let value = [];
+            let initnum = 0;
+            let looptimes = 0;
+            if( input.page_pos > 0 )
+            {
+                initnum = input.items * input.page_pos;
+                looptimes = input.items + ( input.items * input.page_pos );
+            }
+            else
+            {
+                initnum = 0;
+                looptimes = input.items;
+            }
+            for( initnum ; initnum < looptimes ; initnum+=1 )
+            {
+                if( initnum > input.ary.length - 1 )
+                {
+                    break;
+                }
+                value.push( initnum );
+            }
+            return value;
+        }
+        // group_arrays( group_times )
+        // {
+        //     let ary = [];
+        //     let num = 0;
+        //     for( let i=0; i<this.src_array.length; i+=group_times )
+        //     {
+        //         //
+        //     }
+        //     return group_times;
+        // }
+    },
+    computed: {
+        get_vuex_source() {
+            return this.$store.state.data_container;
         }
     }
 }
