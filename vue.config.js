@@ -1,4 +1,4 @@
 module.exports = {
     outputDir: "docs",
-    baseUrl: './f2e-week2',
+    baseUrl: '/f2e-week2',
 }
